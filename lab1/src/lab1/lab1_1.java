@@ -25,26 +25,38 @@ public class lab1_1 {
                 InputNotcorrect = false ;
                 input.close() ;
             }else if (input.hasNextDouble()) {
-                System.out.println("ไม่สามารถใส่ข้อมูลเป็นทศนิยมได้" ) ;
+                System.out.println("Plase Enter Just Only Number" ) ;
+                input.next() ;
+            }else if (input.hasNextFloat()){
+                System.out.println("Plase Enter Just Only Number" ) ;
+                input.next() ;
+            }else if (input.hasNextBoolean()){
+                System.out.println("Plase Enter Just Only Number" ) ;
                 input.next() ;
             }else {
-                System.out.println("ไม่สามารถใส่ข้อมูลเป็นตัวอักษรได้" ) ;
-                input.next() ;
-            }// End if
+            System.out.println("Plase Enter Just Only Number") ;
+            input.next() ;
+        }// End if
             
         }else if (input.hasNextDouble()) {
-            System.out.println("ไม่สามารถใส่ข้อมูลเป็นทศนิยมได้") ;
+            System.out.println("Plase Enter Just Only Number" ) ;
+            input.next() ;
+        }else if (input.hasNextFloat()){
+            System.out.println("Plase Enter Just Only Number" ) ;
+            input.next() ;
+        }else if (input.hasNextBoolean()){
+            System.out.println("Plase Enter Just Only Number" ) ;
             input.next() ;
         }else {
-            System.out.println("ไม่สามารถใส่ข้อมูลเป็นตัวอักษรได้") ;
+            System.out.println("Plase Enter Just Only Number") ;
             input.next() ;
         }// End if
 
         if( InputNotcorrect == false ){
             result = num1 + num2 ;
             System.out.println( "Result : " + result ) ;
-        } else {
-            System.out.println("ข้อมูลไม่ถูกต้อง") ;
         }// End if
     }// End main
 }// End class
+
+//ผมพิมพ์เองไม่ได้ใช้ AI ครับ T-T
