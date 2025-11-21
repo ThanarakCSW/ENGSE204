@@ -7,7 +7,6 @@ public class lab1_3 {
     public static void main(String[] args) {
         
         int n = 0 ;
-        int result ;
         boolean InputNotcorrect = true ;
 
         Scanner input = new Scanner(System.in) ;
