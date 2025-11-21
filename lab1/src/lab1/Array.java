@@ -1,6 +1,6 @@
 package lab1;
 
-import java.util.Scanner;
+import java.util.Scanner ;
 
 public class Array {
     
@@ -17,7 +17,7 @@ public class Array {
         if( input.hasNextInt()) {
             size = input.nextInt() ;
             InputNotcorrect = false ;
-            System.out.println("Array Size (N) is: " + size);
+            System.out.println("Array Size (N) is: " + size) ;
         }else{
             System.out.println("Enter only Number(only integer)!!!" ) ;
         }// End if
@@ -27,7 +27,7 @@ public class Array {
             N = new int[size] ;
 
             for (int i = 0; i < size ; i++) {
-                System.out.print("Enter N[" + (i + 1) + "]: ");
+                System.out.print("Enter N[" + (i + 1) + "]: ") ;
                 if( input.hasNextInt()) {
                     number = input.nextInt() ;
                     N[i] = number ;
@@ -38,7 +38,7 @@ public class Array {
             sum += N[i] ;
             }// End for
             input.close() ;
-            System.out.println("Sum N is: " + sum);
+            System.out.println("Sum N is: " + sum) ;
         }// End if
     }// End main
 }// End class

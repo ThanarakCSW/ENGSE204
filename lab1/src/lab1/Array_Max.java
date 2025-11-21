@@ -1,6 +1,6 @@
-package lab1;
+package lab1 ;
 
-import java.util.Scanner;
+import java.util.Scanner ;
 
 public class Array_Max {
     
