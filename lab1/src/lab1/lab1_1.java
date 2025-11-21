@@ -24,33 +24,27 @@ public class lab1_1 {
                 num2 = input.nextInt() ;
                 InputNotcorrect = false ;
                 input.close() ;
-            } 
-            else if (input.hasNextDouble()) {
+            }else if (input.hasNextDouble()) {
                 System.out.println("ไม่สามารถใส่ข้อมูลเป็นทศนิยมได้" ) ;
                 input.next() ;
-            }
-            else {
+            }else {
                 System.out.println("ไม่สามารถใส่ข้อมูลเป็นตัวอักษรได้" ) ;
                 input.next() ;
             }// End if
             
-        } 
-        else if (input.hasNextDouble()) {
+        }else if (input.hasNextDouble()) {
             System.out.println("ไม่สามารถใส่ข้อมูลเป็นทศนิยมได้") ;
             input.next() ;
-        }
-        else {
+        }else {
             System.out.println("ไม่สามารถใส่ข้อมูลเป็นตัวอักษรได้") ;
             input.next() ;
         }// End if
-        
-        // --- คำนวณและแสดงผลลัพธ์ ---
+
         if( InputNotcorrect == false ){
             result = num1 + num2 ;
             System.out.println( "Result : " + result ) ;
         } else {
-            // เพิ่มข้อความแจ้งเตือนว่าไม่สามารถคำนวณได้
             System.out.println("ข้อมูลไม่ถูกต้อง") ;
-        }
+        }// End if
     }// End main
 }// End class
