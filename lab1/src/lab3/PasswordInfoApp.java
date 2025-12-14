@@ -55,9 +55,11 @@ public class PasswordInfoApp {
         Scanner sc = new Scanner(System.in);
 
         // Read the initial password (first line)
+        System.err.println("Enter initial password:");
         String initialPassword = sc.nextLine();
 
         // Read the new password (second line)
+        System.err.println("Enter new password:");
         String newPassword = sc.nextLine();
 
         // Create a User object with the initial password
