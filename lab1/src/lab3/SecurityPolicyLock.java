@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 class User {
@@ -72,6 +73,7 @@ class User {
 }
 
 public class SecurityPolicyLock {
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
