@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class User {
+class User1 {
     private String username;
 
-    public User(String username) {
+    public User1(String username) {
         if (username == null || username.isEmpty()) {
             this.username = "Invalid Username";
         } else {
@@ -27,9 +27,9 @@ public class UserInfoApp {
         System.out.print("Enter username: ");
         String inputUsername = sc.nextLine();
 
-        User user = new User(inputUsername);
+        User1 user1 = new User1(inputUsername);
 
-        user.display();
+        user1.display();
         sc.close();
     }
 }
