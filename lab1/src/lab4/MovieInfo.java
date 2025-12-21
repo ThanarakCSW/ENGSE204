@@ -60,7 +60,8 @@ public class MovieInfo {
 
         System.out.print("Enter mode (1, 2, or 3): ");
         int mode = sc.nextInt();
-        sc.nextLine(); // clear buffer
+        sc.nextLine();
+        // clear buffer
 
         Movie mv;
 
@@ -92,6 +93,7 @@ public class MovieInfo {
 
         mv.displayDetails();
 
-        sc.close(); // close scanner properly
+        sc.close();
+        // close scanner properly
     }
 }
