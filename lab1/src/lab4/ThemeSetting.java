@@ -3,7 +3,6 @@ package lab4;
 // This program builds immutable Configuration objects.
 // It includes constructor validation, merge constructor logic,
 // and strong input protection to avoid invalid user input.
-
 import java.util.Scanner;
 
 class Configuration {
@@ -16,10 +15,12 @@ class Configuration {
     public Configuration(String theme, int fontSize, boolean darkMode) {
 
         // Validation 1: fontSize must be between 10 and 20
-        if (fontSize < 10)
+        if (fontSize < 10) {
             fontSize = 10;
-        if (fontSize > 20)
+        }
+        if (fontSize > 20) {
             fontSize = 20;
+        }
 
         this.theme = theme;
         this.fontSize = fontSize;
@@ -29,9 +30,12 @@ class Configuration {
     // --- Merge Constructor (combine base + user configs) ---
     public Configuration(Configuration base, Configuration user) {
         // Logic from problem
-        this.theme = user.theme; // user theme overrides base
-        this.darkMode = user.darkMode; // user dark mode overrides base
-        this.fontSize = base.fontSize; // font size comes from base only
+        this.theme = user.theme;
+        // user theme overrides base
+        this.darkMode = user.darkMode;
+        // user dark mode overrides base
+        this.fontSize = base.fontSize;
+        // font size comes from base only
     }
 
     public void displaySettings() {
