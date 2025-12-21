@@ -9,19 +9,20 @@ class AuditRecord {
 
     private static int maxMessages = 3;
 
-    // Simple constructor → call main constructor with empty array
+    // Simple constructor call main constructor with empty array
     public AuditRecord(String user) {
         this(user, new String[0]); // Constructor Chaining
     }
 
-    // Main constructor → Deep Copy + Trimming Old Logs
+    // Main constructor Deep Copy + Trimming Old Logs
     public AuditRecord(String user, String[] logs) {
         this.user = user;
 
         // Validation: trim logs if exceeds policy
         if (logs.length > maxMessages) {
             this.logMessages = new String[maxMessages];
-            int start = logs.length - maxMessages; // keep latest logs
+            int start = logs.length - maxMessages;
+            // keep latest logs
             for (int i = 0; i < maxMessages; i++) {
                 this.logMessages[i] = logs[start + i];
             }
@@ -77,7 +78,7 @@ class AuditRecord {
 
 public class AuditMessage {
 
-    // Validation #1 — type
+    // Validation #1 type
     private static int readInt(Scanner sc, String prompt) {
         while (true) {
             System.out.print(prompt);
