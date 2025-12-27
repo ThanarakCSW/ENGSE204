@@ -54,10 +54,22 @@ public class TransportationCosts {
         System.out.print("Enter Standard Shipping Tracking ID: ");
         String id1 = sc.nextLine();
 
+        // Validation #1: ID cannot be empty
+        if (id1.trim().isEmpty()) {
+            System.out.println("Error: Tracking ID cannot be empty.");
+            return;
+        }
+
+        // Validation #2: ID length must be at least 3 characters
+        if (id1.length() < 3) {
+            System.out.println("Error: Tracking ID must be at least 3 characters.");
+            return;
+        }
+
         System.out.print("Enter Standard Shipping Base Fee: ");
         double base1 = sc.nextDouble();
 
-        // Validation #1: base fee must be >= 0
+        // Validation #3: base fee must be >= 0
         if (base1 < 0) {
             System.out.println("Error: Base fee cannot be negative.");
             return;
@@ -69,10 +81,22 @@ public class TransportationCosts {
         System.out.print("Enter Premium Shipping Tracking ID: ");
         String id2 = sc.nextLine();
 
+        // Validation #4: ID cannot be empty
+        if (id2.trim().isEmpty()) {
+            System.out.println("Error: Tracking ID cannot be empty.");
+            return;
+        }
+
+        // Validation #5: ID length must be at least 3 characters
+        if (id2.length() < 3) {
+            System.out.println("Error: Tracking ID must be at least 3 characters.");
+            return;
+        }
+
         System.out.print("Enter Premium Shipping Base Fee: ");
         double base2 = sc.nextDouble();
 
-        // Validation #2: base fee must be >= 0
+        // Validation #6: base fee must be >= 0
         if (base2 < 0) {
             System.out.println("Error: Base fee cannot be negative.");
             return;
@@ -81,7 +105,7 @@ public class TransportationCosts {
         System.out.print("Enter Premium Shipping Insurance Fee: ");
         double insurance = sc.nextDouble();
 
-        // Validation #3: insurance fee must be >= 0
+        // Validation #7: insurance fee must be >= 0
         if (insurance < 0) {
             System.out.println("Error: Insurance fee cannot be negative.");
             return;
