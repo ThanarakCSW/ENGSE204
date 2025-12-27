@@ -1,6 +1,7 @@
 package lab5;
 
 class User {
+
     protected String name;
 
     public User(String name) {
@@ -13,6 +14,7 @@ class User {
 }
 
 class Developer extends User {
+
     protected int projects;
 
     public Developer(String name, int projects) {
@@ -27,6 +29,7 @@ class Developer extends User {
 }
 
 class Admin extends Developer {
+
     protected String adminKey;
 
     public Admin(String name, int projects, String adminKey) {
@@ -45,6 +48,7 @@ class Admin extends Developer {
 }
 
 public class SecuritySystem {
+
     public static void main(String[] args) {
 
         java.util.Scanner sc = new java.util.Scanner(System.in);
