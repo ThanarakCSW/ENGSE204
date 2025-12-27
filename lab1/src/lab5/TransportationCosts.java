@@ -1,5 +1,7 @@
 package lab5;
 
+import java.util.Scanner;
+
 class Shipping {
     protected String trackingId;
     protected double baseFee;
@@ -9,7 +11,7 @@ class Shipping {
         this.baseFee = baseFee;
     }
 
-    // Returns the base fee
+    // Returns base fee
     public double calculateTotalFee() {
         return baseFee;
     }
@@ -22,7 +24,7 @@ class StandardShipping extends Shipping {
 
     @Override
     public double calculateTotalFee() {
-        // Add 5% processing fee
+        // Return base fee + 5% processing fee
         return baseFee * 1.05;
     }
 }
@@ -37,7 +39,7 @@ class PremiumShipping extends Shipping {
 
     @Override
     public double calculateTotalFee() {
-        // Must call super to get base fee
+        // Must call super.calculateTotalFee() to get the base fee
         double base = super.calculateTotalFee();
         return base + insuranceFee;
     }
@@ -46,16 +48,44 @@ class PremiumShipping extends Shipping {
 public class TransportationCosts {
     public static void main(String[] args) {
 
-        java.util.Scanner sc = new java.util.Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        // ----- Input for StandardShipping -----
-        String id1 = sc.next();
+        // ---------------- StandardShipping Input ----------------
+        System.out.print("Enter Standard Shipping Tracking ID: ");
+        String id1 = sc.nextLine();
+
+        System.out.print("Enter Standard Shipping Base Fee: ");
         double base1 = sc.nextDouble();
 
-        // ----- Input for PremiumShipping -----
-        String id2 = sc.next();
+        // Validation #1: base fee must be >= 0
+        if (base1 < 0) {
+            System.out.println("Error: Base fee cannot be negative.");
+            return;
+        }
+
+        sc.nextLine(); // Clear buffer
+
+        // ---------------- PremiumShipping Input ----------------
+        System.out.print("Enter Premium Shipping Tracking ID: ");
+        String id2 = sc.nextLine();
+
+        System.out.print("Enter Premium Shipping Base Fee: ");
         double base2 = sc.nextDouble();
+
+        // Validation #2: base fee must be >= 0
+        if (base2 < 0) {
+            System.out.println("Error: Base fee cannot be negative.");
+            return;
+        }
+
+        System.out.print("Enter Premium Shipping Insurance Fee: ");
         double insurance = sc.nextDouble();
+
+        // Validation #3: insurance fee must be >= 0
+        if (insurance < 0) {
+            System.out.println("Error: Insurance fee cannot be negative.");
+            return;
+        }
 
         // Create objects
         Shipping s1 = new StandardShipping(id1, base1);
@@ -64,7 +94,8 @@ public class TransportationCosts {
         // Store in array of parent class
         Shipping[] list = { s1, s2 };
 
-        // Display final fees
+        // Display results
+        System.out.println("\n--- Shipping Fees ---");
         for (Shipping s : list) {
             System.out.println(s.calculateTotalFee());
         }
